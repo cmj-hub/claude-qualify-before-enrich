@@ -2,7 +2,7 @@
 name: qualify-before-enrich
 description: "Run an ICP field check on every list row before any paid finder or enrichment credit. Refuse paid lookup on a failing row. Use when cleaning a prospect list, before Apollo/ZoomInfo/Hunter/Clay enrichment, before email finding, or when credits are burning on bad-fit accounts. Not for writing the cold email or building the ICP itself."
 argument-hint: "[list path or signal | score]"
-allowed-tools: Read Write Bash(python3 ${CLAUDE_SKILL_DIR}/scripts/score.py:*)
+allowed-tools: Read Write(./gtm/**) Bash(python3 ${CLAUDE_SKILL_DIR}/scripts/score.py:*)
 models: ""
 ---
 
