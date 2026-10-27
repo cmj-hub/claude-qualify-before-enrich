@@ -60,6 +60,23 @@ Swap `claude-code` for `cursor`, `codex`, `grok`, `github-copilot`, `windsurf`, 
 
 Part of the GTM operator suite: see [gtm-operator-skills](https://github.com/cmj-hub/gtm-operator-skills).
 
+### From npm
+
+The same pack is on npm as [`@jmc-gtm/claude-qualify-before-enrich`](https://www.npmjs.com/package/@jmc-gtm/claude-qualify-before-enrich), released from this repo's version tags with npm provenance. It has no dependencies and no install scripts.
+
+In a project, for any agent host the skills installer knows (`experimental_sync` is still marked experimental there):
+
+```bash
+npm install -D @jmc-gtm/claude-qualify-before-enrich
+npx skills experimental_sync -a claude-code -y
+```
+
+In your own Claude Code plugin marketplace, point an entry at the package:
+
+```json
+{ "name": "qualify-before-enrich", "source": { "source": "npm", "package": "@jmc-gtm/claude-qualify-before-enrich" } }
+```
+
 ## What you walk out with in 15 minutes
 
 Artifact: `gtm/qualify.json` (start from `skills/qualify-before-enrich/examples/rows-good.json`).
